@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interesting Button</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.js">
+</head>
+<body>
+    <p>Ты болтушка?</p>
+    <div class = "buttons">
+        <button class = "button">НЕТ</button>
+        <button class = "button2">ДА</button>
+    </div>
+    <script>
+    const random = (min, max) => {
+        const rand = min + Math.random() * (max - min + 1);
+        return Math.floor(rand);
+    }
+    const button = document.querySelector(".button");
+    const button2 = document.querySelector(".button2");
+    button.addEventListener('mouseenter', () => {
+        button.style.left = `${random(0, 90)}%`;
+        button.style.top = `${random(0, 90)}%`;
+    });
+    button.addEventListener('click', () => {
+        alert('Ты не могла попасть');
+    });
+    button2.addEventListener('click', () => {
+        alert('Я знаю)');
+    });
+
+
+    </script>
+</body>
+</html>
